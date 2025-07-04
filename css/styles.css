@@ -1,0 +1,171 @@
+@font-face{
+    font-family: "LexendPeta";
+    src: url("../fonts/LexendPeta-Light.ttf")
+}
+
+@font-face{
+    font-family: "CormorantUpright";
+    src: url("../fonts/CormorantUpright-Regular.ttf")
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body.user-page{
+    font-family: "LexendPeta";
+    background-image: url('../pictures/LOGIN.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow:hidden;
+    font-size: 12px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #351B00;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:#351B00;
+    height: 1px;
+    opacity: 100%;
+    margin: 0px
+}
+
+.navbar-collapse {
+    border-bottom: 1px solid #351B00;
+    width: 100%
+}
+
+marquee {
+    font-family: "CormorantUpright";
+    font-size: 20px;
+    color: #FFFAF4
+}
+
+.cormorant-upright-20 {
+    font-family: "CormorantUpright";
+    font-size: 20px;
+}
+
+.cormorant-upright-12 {
+    font-family: "CormorantUpright";
+    font-size: 12px;
+}
+
+.lexend-peta-12 {
+    font-family: "LexendPeta";
+    font-size: 12px;
+}
+
+.lexend-peta-20 {
+    font-family: "LexendPeta";
+    font-size: 20px;
+}
+
+.blink {
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.bg-cream {
+    background-color: #FFFAF4
+}
+
+.bg-brown {
+    background-color: #351B00
+}
+
+.text-cream {
+    color: #FFFAF4
+}
+
+.table-container {
+    overflow:auto;
+}
+
+#product-gallery {
+    max-width: 100%;
+    scrollbar-width: thin;
+}
+
+@media (min-width: 768px) {
+    #product-gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    #product-gallery {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-image {
+        display: inline-block;
+        width: 100%;
+        object-fit: cover;
+        scroll-snap-align: start;
+    }
+}
+
+.low-stock td{
+    color:#dc3545 !important;   /* same red Bootstrap uses */
+    font-weight:700 !important; /* bold */
+}
+
+.category-card {
+    display: flex;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-label{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+
